@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+li{
+  list-style-type: none;
+}
+
 .main-wrapper{
   position: relative;
   height: 100vh;
@@ -15,15 +19,53 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
+  display: flex;
   height: 90%;
   width: 80%;
 }
+/* Left Column */
+.leftCol{
+  min-width: 300px;
+  width: 30%;
+  background-color: aqua;
+}
+.user{
+  height: 40px;
+  background-color: #eaeaea;
+}
+.notification{
+  height: 40px;
+  background-color: #8edafc;
+}
+.search{
+  height: 25px;
+  background-color: white;
+}
+.friendList{
+  height: calc(100% - 105px);
+  background-color: white;
+  overflow-y: scroll;
+
+}
+.friend{
+  height: 40px;
+  background-color: #e9ebea;
+}
+/* --Left Column */
+.secondCol{
+  min-width: 450px;
+  width: 70%;
+  background-color: beige;
+}
+
 
 header{
+  width: 100%;
   height: 20%;
-  background-color: rgb(32, 145, 120);
+  background-color: #009788;
 }
 main{
+  width: 100%;
   height: 80%;
-  background-color: rgb(206, 206, 206);
+  background-color: #dbdbd3;
 }
