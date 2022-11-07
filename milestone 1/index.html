@@ -57,9 +57,40 @@
         </div>
       </div>
       <div class="secondCol">
-        <div class="friendSelected"></div>
-        <div class="chat"></div>
-        <div class="userInput"></div>
+        <div class="friendSelected">
+          <div class="left">
+            <div class="account-img">
+              <img src="img/avatar_1.jpg" alt="">
+            </div>
+            <span>{{contacts[0].name}}</span>
+          </div>
+          <div class="right">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-link"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </div>
+        <div class="chat">
+          <div 
+          v-for="contact in contacts" 
+          class="textArea">
+            <p class="sentMessage" v-if="contact.active">
+              {{contact.messages[0].message}}
+            </p>
+            <p 
+            class="receivedMessage" 
+            v-if="contact.active">
+            {{contact.messages[2].message}}
+
+            </p>
+          </div>
+        </div>
+        <div class="userInput">
+          <i class="fa-regular fa-face-smile"></i>
+          <input type="text" placeholder="Scrivi un messaggio">
+          <i class="fa-solid fa-microphone"></i>
+
+        </div>
       </div>
     </div>
   </div>
