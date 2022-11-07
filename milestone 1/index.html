@@ -29,19 +29,30 @@
         <div class="notification">
           <i class="fa-solid fa-bell-slash"></i>
           <div>
-            
             <span>Ricevi notifiche di nuovi messaggi</span>
             <span><a href="#">Attiva notifiche desktop</a></span>
           </div>
         </div>
-        <div class="search"></div>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Cerca o inizia una nuova chat">
+        </div>
         <div class="friendList">
           <ul>
-            <li class="friend">Michele</li>
-            <li>Michele</li>
-            <li>Michele</li>
-            <li>Michele</li>
-            <li>Michele</li>
+            <li 
+            v-for="contact in contacts" 
+            class="friend" 
+            :class="{friendActive : contact.active}">
+              <img :src="'img/avatar'+ contact.avatar + '.jpg'" alt="">
+              <div class="nameMess">
+                <span>{{contact.name}}</span>
+                <span class="lastMessageText">Ultimo messaggio inviato</span>
+              </div>
+              <div class="lastMessageTime">
+                12:00
+              </div>
+            </li>
+            
           </ul>
         </div>
       </div>

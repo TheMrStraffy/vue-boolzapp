@@ -39,6 +39,7 @@ border-radius: 50%;
   width: 30%;
   background-color: aqua;
 }
+/* user */
 .user{
   display: flex;
   justify-content: space-between;
@@ -59,6 +60,9 @@ border-radius: 50%;
   align-items: center;
   width: 30%;
 }
+
+/* --user */
+/* notification */
 .notification{
   display: flex;
   justify-content: flex-start;
@@ -79,20 +83,71 @@ border-radius: 50%;
   display: block;
   margin-left: 10px;
 }
+/* --notification */
+/* search */
 .search{
   height: 35px;
   background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
+.search i {
+ padding: 0 15px;
+ margin-left: 15px;
+ border: 1px solid #fcfcfc;
+ color: #bebebe;
+}
+.search input{
+ width: 80%;
+ border: 1px solid #fcfcfc;
+}
+/* --search */
+
+/* friendlist */
 .friendList{
   height: calc(100% - 145px);
   background-color: white;
   overflow-y: scroll;
-
+  
 }
 .friend{
-  height: 40px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  
+  padding-left: 8px;
+}
+.friend:hover{
+  background-color: #f5f5f5;
+}
+.friendActive{
+background-color: #e9ebea;
+}
+.nameMess{
+  width: 80%;
+  padding-left: 8px;
+}
+.friend img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   background-color: #e9ebea;
 }
+.lastMessageText{
+  display: block;
+  font-size: 0.8rem;
+  color: #c7c9c8;
+}
+.lastMessageTime{
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #c7c9c8;
+}
+/* --friendlist */
+
 /* --Left Column */
 
 /* Right Column */

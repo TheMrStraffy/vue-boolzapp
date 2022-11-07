@@ -10,6 +10,7 @@ createApp({
       },
       contacts: [
         {
+          active: true,
           name: 'Michele',
           avatar: '_1',
           visible: true,
@@ -32,6 +33,7 @@ createApp({
           ],
         },
         {
+          active: false,
           name: 'Fabio',
           avatar: '_2',
           visible: true,
@@ -54,6 +56,7 @@ createApp({
           ],
         },
         {
+          active: false,
           name: 'Samuele',
           avatar: '_3',
           visible: true,
@@ -76,6 +79,7 @@ createApp({
           ],
         },
         {
+          active: false,
           name: 'Alessandro B.',
           avatar: '_4',
           visible: true,
@@ -93,6 +97,7 @@ createApp({
           ],
         },
         {
+          active: false,
           name: 'Alessandro L.',
           avatar: '_5',
           visible: true,
@@ -110,6 +115,7 @@ createApp({
           ],
         },
         {
+          active: false,
           name: 'Claudia',
           avatar: '_6',
           visible: true,
@@ -132,6 +138,7 @@ createApp({
           ],
         },
         {
+          active: false,
           name: 'Federico',
           avatar: '_7',
           visible: true,
@@ -149,6 +156,7 @@ createApp({
           ],
         },
         {
+          active: false,
           name: 'Davide',
           avatar: '_8',
           visible: true,
