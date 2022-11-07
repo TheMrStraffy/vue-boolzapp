@@ -3,25 +3,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background: rgb(0,151,136);
+background: linear-gradient(180deg, rgba(0,151,136,1) 20%, rgba(218,219,213,1) 20%);
+}
 li{
   list-style-type: none;
 }
 
 .main-wrapper{
-  position: relative;
   height: 100vh;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .interface{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   background-color: white;
   display: flex;
   height: 90%;
   width: 80%;
+}
+.account-img{
+  width: 45px;
+  height: 45px;
+}
+.account-img img{
+width: 100%;
+border-radius: 50%;
 }
 /* Left Column */
 .leftCol{
@@ -30,19 +40,21 @@ li{
   background-color: aqua;
 }
 .user{
-  height: 40px;
+  display: flex;
+  height: 50px;
   background-color: #eaeaea;
+  border-right: 1px solid darkgray;
 }
 .notification{
-  height: 40px;
+  height: 50px;
   background-color: #8edafc;
 }
 .search{
-  height: 25px;
+  height: 35px;
   background-color: white;
 }
 .friendList{
-  height: calc(100% - 105px);
+  height: calc(100% - 135px);
   background-color: white;
   overflow-y: scroll;
 
@@ -52,20 +64,26 @@ li{
   background-color: #e9ebea;
 }
 /* --Left Column */
+
+/* Right Column */
 .secondCol{
   min-width: 450px;
   width: 70%;
-  background-color: beige;
+  background-color: white;
 }
+.friendSelected{
+  height: 50px;
+  background-color: #eaeaea;
+}
+.chat{
+  height: calc(100% - 100px);
+  background-image:url('../img/mine.jpg');
+  overflow-y: scroll;
+}
+.userInput{
+  height: 50px;
+  background-color: #f3eeea;
+}
+/* --Right Column */
 
 
-header{
-  width: 100%;
-  height: 20%;
-  background-color: #009788;
-}
-main{
-  width: 100%;
-  height: 80%;
-  background-color: #dbdbd3;
-}
