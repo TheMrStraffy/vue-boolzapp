@@ -41,20 +41,50 @@ border-radius: 50%;
 }
 .user{
   display: flex;
+  justify-content: space-between;
   height: 50px;
   background-color: #eaeaea;
   border-right: 1px solid darkgray;
+  padding: 0 5px;
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.right{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
 }
 .notification{
-  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
   background-color: #8edafc;
+  padding-left: 20px;
+}
+.notification i{
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+}
+.notification span{
+  display: block;
+  margin-left: 10px;
 }
 .search{
   height: 35px;
   background-color: white;
 }
 .friendList{
-  height: calc(100% - 135px);
+  height: calc(100% - 145px);
   background-color: white;
   overflow-y: scroll;
 
