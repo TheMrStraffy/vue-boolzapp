@@ -43,7 +43,8 @@
             v-for="(contact,index) in contacts" 
             @click="getContact(index)"
             class="friend" 
-            :class="{friendActive : !index}">
+            :class="{friendActive : index === active}"
+            >
               <img :src="'img/avatar'+ contact.avatar + '.jpg'" alt="">
               <div class="nameMess">
                 <span>{{contact.name}}</span>
