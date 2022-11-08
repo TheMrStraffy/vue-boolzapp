@@ -203,12 +203,23 @@ createApp({
       }
       this.contacts[this.active].messages.push(this.newText);
       this.newTextString = '';
-      
+      setTimeout(() => {
+        this.receiveMessage();
+      }, 1000);
+    },
+    receiveMessage(){
+      this.newTextString = 'Ok!';
+      this.newText = {
+        date: '',
+        message: this.newTextString,
+        status: 'received'
+      }
+      this.contacts[this.active].messages.push(this.newText);
+      this.newTextString = '';
     }
   },
   mounted(){
     
-    console.log(this.getContact(this.active));
   },
   created(){
 
