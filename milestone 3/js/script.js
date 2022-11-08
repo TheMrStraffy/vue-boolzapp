@@ -2,7 +2,7 @@ const {createApp} = Vue;
 createApp({
   data(){
     return{
-      active: 0,
+      
       user: {
         name: 'Straffy',
         avatar: '_io',
@@ -179,13 +179,30 @@ createApp({
             }
           ],
         }
-        ]
+        ],
+        newText: {
+          date :'',
+          message : this.newTextString,
+          status : 'sent'
+        },
+        newTextString :'',
+        active: 0,
     }
   },
   methods: {
     getContact(index){
       console.log("is clicked");
       return this.active = index;
+      
+    },
+    sendMessage(){
+      this.newText = {
+        date: '',
+        message: this.newTextString,
+        status: 'sent'
+      }
+      this.contacts[this.active].messages.push(this.newText);
+      this.newTextString = '';
       
     }
   },
