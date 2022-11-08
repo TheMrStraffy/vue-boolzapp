@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous'/>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <div id="app" class="interface">
+      
+      <div class="leftCol">
+        <div class="user">
+          <div class="left">
+            <div class="account-img">
+              <img src="img/avatar_io.jpg" alt="">
+            </div>
+            <span>Sofia</span>
+          </div>
+          <div class="right">
+            <i class="fa-solid fa-circle-notch"></i>
+            <i class="fa-solid fa-message"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </div>
+        <div class="notification">
+          <i class="fa-solid fa-bell-slash"></i>
+          <div>
+            <span>Ricevi notifiche di nuovi messaggi</span>
+            <span><a href="#">Attiva notifiche desktop</a></span>
+          </div>
+        </div>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Cerca o inizia una nuova chat">
+        </div>
+        <div class="friendList">
+          <ul>
+            <li 
+            v-for="(contact,index) in contacts" 
+            @click="getContact(index)"
+            class="friend" 
+            :class="{friendActive : !index}">
+              <img :src="'img/avatar'+ contact.avatar + '.jpg'" alt="">
+              <div class="nameMess">
+                <span>{{contact.name}}</span>
+                <span class="lastMessageText">Ultimo messaggio inviato</span>
+              </div>
+              <div class="lastMessageTime">
+                12:00
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="secondCol">
+        <div class="friendSelected">
+          <div class="left">
+            <div class="account-img">
+              <img :src="'img/avatar'+ contacts[active].avatar + '.jpg'" alt="">
+            </div>
+            <span>{{contacts[active].name}}</span>
+          </div>
+          <div class="right">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-link"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </div>
+        <div class="chat">
+          <div  v-for="text in contacts[active].messages"
+          class="textArea">
+            <p 
+            v-if="text.status === 'sent'"
+            class="sentMessage" >
+              {{text.message}}
+            </p>
+            <p v-if="text.status === 'received'"
+            class="receivedMessage" 
+            >
+            {{text.message}}
+            </p>
+          </div>
+        </div>
+        <div class="userInput">
+          <i class="fa-regular fa-face-smile"></i>
+          <input type="text" placeholder="Scrivi un messaggio">
+          <i class="fa-solid fa-microphone"></i>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
