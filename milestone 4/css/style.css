@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: rgb(0,151,136);
+background: linear-gradient(180deg, rgba(0,151,136,1) 20%, rgba(218,219,213,1) 20%);
+}
+li{
+  list-style-type: none;
+}
+#search{
+  padding: 7px 0;
+}
+#search:focus{
+ outline: none;
+}
+.main-wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interface{
+
+  background-color: white;
+  display: flex;
+  height: 90%;
+  width: 80%;
+}
+.account-img{
+  width: 45px;
+  height: 45px;
+}
+.account-img img{
+width: 100%;
+border-radius: 50%;
+}
+/* Left Column */
+.leftCol{
+  min-width: 300px;
+  width: 30%;
+  background-color: aqua;
+}
+/* user */
+.user{
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #eaeaea;
+  border-right: 1px solid darkgray;
+  padding: 0 5px;
+}
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.right{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+}
+.user .right i {
+  cursor: pointer;
+}
+
+/* --user */
+/* notification */
+.notification{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  background-color: #8edafc;
+  padding-left: 20px;
+}
+.notification i{
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+}
+.notification span{
+  display: block;
+  margin-left: 10px;
+}
+/* --notification */
+/* search */
+.search{
+  height: 35px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search i {
+ padding: 0 15px;
+ margin-left: 15px;
+ border: 1px solid #fcfcfc;
+ color: #bebebe;
+}
+.search input{
+ width: 80%;
+ border: 1px solid #fcfcfc;
+}
+/* --search */
+
+/* friendlist */
+.friendList{
+  height: calc(100% - 145px);
+  background-color: white;
+  overflow-y: scroll;
+  
+}
+.friend{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  
+  padding-left: 8px;
+}
+.friend:hover{
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.friendActive{
+background-color: #e9ebea;
+}
+.nameMess{
+  width: 80%;
+  padding-left: 8px;
+}
+.friend img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #e9ebea;
+}
+.lastMessageText{
+  display: block;
+  font-size: 0.8rem;
+  color: #c7c9c8;
+}
+.lastMessageTime{
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #c7c9c8;
+}
+/* --friendlist */
+
+/* --Left Column */
+
+/* Right Column */
+.secondCol{
+  min-width: 450px;
+  width: 70%;
+  background-color: white;
+}
+.friendSelected{
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #eaeaea;
+}
+.friendSelected .right{
+  width: 15%;
+}
+.friendSelected .right i{
+  cursor: pointer;
+}
+/* chat */
+.chat{
+  height: calc(100% - 100px);
+  background-image:url('../img/mine.jpg');
+  overflow-y: scroll;
+  padding: 50px 25px;
+}
+.sentMessage{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d5f9bb;
+  margin-left: 60%;
+  padding-right: 35px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  min-width: 150px;
+  min-height: 50px;
+  border-radius: 15px;
+}
+.receivedMessage{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin-right: 60%;
+  padding-left: 35px;
+  padding-right: 10px;
+  margin-bottom: 8px;
+  min-width: 150px;
+  min-height: 50px;
+  border-radius: 15px;
+
+}
+.textDate{
+  align-self: flex-end;
+  padding-bottom: 5px;
+  font-size: 0.6rem;
+  
+}
+
+/* --chat */
+.userInput{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 50px;
+  background-color: #f3eeea;
+}
+.userInput i{
+  width: 15%;
+}
+.userInput input{
+  width: 70%;
+  height: 35px;
+  border: 1px solid #eaeaea;
+  padding-left: 10px;
+}
+/* --Right Column */
+
+
