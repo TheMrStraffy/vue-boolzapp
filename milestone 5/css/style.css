@@ -185,6 +185,9 @@ background-color: #e9ebea;
   overflow-y: scroll;
   padding: 50px 25px;
 }
+.textArea{
+  position: relative;
+}
 .sentMessage{
   display: flex;
   align-items: center;
@@ -198,10 +201,10 @@ background-color: #e9ebea;
   min-height: 50px;
   border-radius: 15px;
 }
+
 .receivedMessage{
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: white;
   margin-right: 60%;
   padding-left: 35px;
@@ -210,7 +213,9 @@ background-color: #e9ebea;
   min-width: 150px;
   min-height: 50px;
   border-radius: 15px;
-
+}
+.textMessage{
+  width: 80%;
 }
 .textDate{
   align-self: flex-end;
@@ -219,6 +224,18 @@ background-color: #e9ebea;
   
 }
 
+.dropBtn{
+  cursor: pointer;
+}
+.dropDownContent{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+
+}
 /* --chat */
 .userInput{
   display: flex;

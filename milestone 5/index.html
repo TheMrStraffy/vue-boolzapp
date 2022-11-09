@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous'/>
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
   <div class="main-wrapper">
@@ -85,16 +86,26 @@
             <p 
             v-if="text.status === 'sent'"
             class="sentMessage" >
-              {{text.message}}
-              <span class="textDate">{{text.date}}</span>
+            <span class="textMessage">{{text.message}}</span>
+            <span class="textDate">{{text.date}}</span>
               <i class="fa-solid fa-chevron-down"></i>
             </p>
+
             <p v-if="text.status === 'received'"
             class="receivedMessage" 
             >
-            {{text.message}}
+            <span class="textMessage">{{text.message}}</span>
+            
             <span class="textDate">{{text.date}}</span>
-            <i class="fa-solid fa-chevron-down"></i>
+              <i 
+              @click="messageOption()"
+              class="fa-solid fa-chevron-down"></i>
+              <!-- <div 
+              v-show="isClicked"
+              class="dropDownContent">
+                <span>Info Messaggio</span>
+                <span>Cancella Messaggio</span>
+              </div> -->
             </p>
           </div>
         </div>
@@ -112,6 +123,7 @@
     </div>
   </div>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.min.js" integrity="sha512-79nhbkASdW5wurW8DtF9Vd7BEDKdTbCKkh87lW6W3tk9T4L9Bc58MzmvRzjMcFCSKpjkoRjwzrTdfOa5lkfJ5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="js/script.js"></script>
 </body>
