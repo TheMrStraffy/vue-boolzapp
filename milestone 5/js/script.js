@@ -199,7 +199,7 @@ createApp({
       
     },
     sendMessage(){
-      nowMessage = DateTime.now().setLocale('it').toLocaleString(DateTime.TIME_24_WITH_SECONDS);
+      nowMessage = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
       this.newText = {
         date : nowMessage,
         message: this.newTextString,
@@ -215,7 +215,7 @@ createApp({
     },
     receiveMessage(){
       this.newTextString = 'Ok!';
-      nowMessage = DateTime.now().setLocale('it').toLocaleString(DateTime.TIME_24_WITH_SECONDS);
+      nowMessage = DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
       this.newText = {
         date : nowMessage,
         message: this.newTextString,
